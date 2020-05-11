@@ -21,10 +21,10 @@ const Navigation = () => {
     );
 }
 
-const Header = () => {
+const Header = (props) => {
     return (
         <div className="top-header">
-            <Title />
+            <Title cgpa={props.cgpa} />
             <Navigation />
         </div>
     );
