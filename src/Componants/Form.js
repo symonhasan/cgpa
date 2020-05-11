@@ -1,6 +1,5 @@
 import React from 'react';
 import './Form.css';
-import './bootstrap.min.css';
 
 const TextField = (props) => {
     return (
