@@ -1,0 +1,24 @@
+.top-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #455A64;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+.top-header h2{
+    letter-spacing: 2px;
+    color: white;
+}
+.nav-area{
+    display: flex;
+}
+.nav-area li{
+    list-style-type: none;
+    cursor: pointer;
+    color: white;
+    letter-spacing: 1px;
+}
+.nav-area li:hover{
+    color: #CFD8DC;
+}
