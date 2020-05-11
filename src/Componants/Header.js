@@ -1,8 +1,8 @@
 import React from 'react';
 import './Header.css';
 
-const Title = () => {
-    return <h2>CGPA Calculator</h2>
+const Title = (props) => {
+    return <h2>CGPA <span>{props.cgpa}</span></h2>
 }
 
 const NavLink = (props) => {
