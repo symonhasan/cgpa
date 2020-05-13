@@ -1,0 +1,14 @@
+.course-list{
+    width: 50vw;
+}
+.course-list th{
+    padding: 8px;
+    background-color: #FF6E40;
+    border: none;
+    color: white;
+}
+.course-list td{
+    padding: 8px;
+    background-color: #FF9E80;
+    color: white;
+}
