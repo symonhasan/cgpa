@@ -24,13 +24,18 @@ class App extends Component {
             ],
         });
     };
+    resetAll = () => {
+        this.setState({
+            subjectList: [],
+        });
+    }
 
     calculateCGPA() {
         let courseList = this.state.subjectList;
         let totalCredit = 0;
         for (let i = 0; i < courseList.length; i++)
             totalCredit += courseList[i].credit;
-        // console.log( totalCredit );
+        
         let gpaSum = 0;
         for (let i = 0; i < courseList.length; i++)
             gpaSum += courseList[i].credit * courseList[i].gpa;
@@ -47,9 +52,16 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <Header cgpa={this.calculateCGPA()} />
+                <Header cgpa={this.calculateCGPA()} func={this.resetAll} />
                 <div className="AppBody">
-                    <Form func={this.addCourse} />
+                    <div className="">
+                        <Form func={this.addCourse} />
+                        <div className="info">
+                            <p>
+                                lorem ipsum
+                            </p>
+                        </div>
+                    </div>
                     {this.TableShow()}
                 </div>
             </div>

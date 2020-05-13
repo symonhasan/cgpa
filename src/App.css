@@ -12,3 +12,10 @@
   justify-content: space-evenly;
   align-content: center;
 }
+.info{
+  padding: 10px 10px;
+  background-color: #E0F7FA;
+  border-radius: 4px;
+  margin-top: 10px;
+  box-shadow: 3px 3px 8px 2px rgba( 0 , 0 , 0 , 0.2 );
+}

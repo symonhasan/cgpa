@@ -1,16 +1,19 @@
 .course-list{
     width: 50vw;
+    box-shadow: 3px 3px 8px 2px rgba( 0 , 0 , 0 , 0.2 );
+    margin-bottom: 20px;
+    border-radius: 4px;
 }
 .course-list th{
     padding: 8px;
-    background-color: #FF6E40;
+    background-color: #0097A7;
     border: none;
     color: white;
 }
 .course-list td{
     padding: 8px;
-    background-color: #FF9E80;
-    color: white;
+    background-color: #80DEEA;
+    color: #004D40;
 }
 .course-list tbody{
     text-align: center;

@@ -7,16 +7,17 @@ const Title = (props) => {
 
 const NavLink = (props) => {
     return (
-        <li>
+        <li onClick={props.func}>
              {props.name}
         </li>
     );
 }
 
-const Navigation = () => {
+const Navigation = (props) => {
     return (
         <ul className="nav-area">
             <NavLink name="ABOUT" />
+            <NavLink name="RESET" func={props.func} />
         </ul>
     );
 }
@@ -25,7 +26,7 @@ const Header = (props) => {
     return (
         <div className="top-header">
             <Title cgpa={props.cgpa} />
-            <Navigation />
+            <Navigation func={props.func}/>
         </div>
     );
 }
