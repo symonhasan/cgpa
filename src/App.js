@@ -57,9 +57,7 @@ class App extends Component {
                     <div className="">
                         <Form func={this.addCourse} />
                         <div className="info">
-                            <p>
-                                lorem ipsum
-                            </p>
+                            <p>This site don't store any of your private data or entered data to server. You must have javascript enable in your browser to run this website.</p>
                         </div>
                     </div>
                     {this.TableShow()}
