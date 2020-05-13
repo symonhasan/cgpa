@@ -28,14 +28,13 @@ class App extends Component {
         this.setState({
             subjectList: [],
         });
-    }
+    };
 
     calculateCGPA() {
         let courseList = this.state.subjectList;
         let totalCredit = 0;
         for (let i = 0; i < courseList.length; i++)
             totalCredit += courseList[i].credit;
-        
         let gpaSum = 0;
         for (let i = 0; i < courseList.length; i++)
             gpaSum += courseList[i].credit * courseList[i].gpa;
@@ -57,7 +56,12 @@ class App extends Component {
                     <div className="">
                         <Form func={this.addCourse} />
                         <div className="info">
-                            <p>This site don't store any of your private data or entered data to server. You must have javascript enable in your browser to run this website.</p>
+                            <p>
+                                This site don't store any of your private data
+                                or entered data to server. You must have
+                                javascript enable in your browser to run this
+                                website.
+                            </p>
                         </div>
                     </div>
                     {this.TableShow()}
