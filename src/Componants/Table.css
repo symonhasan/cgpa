@@ -12,3 +12,6 @@
     background-color: #FF9E80;
     color: white;
 }
+.course-list tbody{
+    text-align: center;
+}
