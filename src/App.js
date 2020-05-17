@@ -71,7 +71,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <Header cgpa={this.calculateCGPA()} func={this.resetAll} link="https://github.com" />
+                <Header cgpa={this.calculateCGPA()} func={this.resetAll} link="https://github.com/symonhasan/cgpa" />
                   <div className="error">
                       {
                         this.state.showError ? <p onClick={this.resetShowMsg}>{this.state.alertMsg}</p> : null
