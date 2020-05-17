@@ -39,9 +39,25 @@ class App extends Component {
               showError: false
           });
         }
-        else{
-          this.renderError();
+        else if( name === "" ){
+            this.setState({
+                alertMsg: "Course title is empty",
+                showError: true
+            });
         }
+        else if( isNaN( credit ) ){
+            this.setState({
+                alertMsg: "Entered credit hour is not a number",
+                showError: true
+            });
+        }
+        else if( isNaN( gpa ) ){
+            this.setState({
+                alertMsg: "Entered gpa is not a number",
+                showError: true
+            });
+        }
+        
     };
     resetAll = () => {
         this.setState({
