@@ -7,18 +7,18 @@ const Title = (props) => {
 
 const NavLink = (props) => {
     return (
-        <li onClick={props.func}>
+        <a onClick={props.func} href={props.link}>
              {props.name}
-        </li>
+        </a>
     );
 }
 
 const Navigation = (props) => {
     return (
-        <ul className="nav-area">
-            <NavLink name="ABOUT" />
-            <NavLink name="RESET" func={props.func} />
-        </ul>
+        <div className="nav-area">
+            <NavLink name="GITHUB" link={props.link} />
+            <NavLink name="RESET" func={props.func}  />
+        </div>
     );
 }
 
@@ -26,7 +26,7 @@ const Header = (props) => {
     return (
         <div className="top-header">
             <Title cgpa={props.cgpa} />
-            <Navigation func={props.func}/>
+            <Navigation func={props.func} link={props.link}/>
         </div>
     );
 }

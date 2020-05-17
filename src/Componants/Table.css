@@ -11,10 +11,28 @@
     color: white;
 }
 .course-list td{
-    padding: 8px;
-    background-color: #80DEEA;
-    color: #004D40;
+  padding: 8px;
+}
+.course-list tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+.course-list tr:hover{
+  background-color: #ddd;
 }
 .course-list tbody{
     text-align: center;
+}
+@media screen and (max-width: 850px) {
+  .course-list{
+    width: 80vw;
+    margin: 10px;
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .course-list{
+    width: 100%;
+    margin: 10px;
+    margin-top: 0;
+  }
 }

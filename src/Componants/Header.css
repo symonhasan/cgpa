@@ -13,13 +13,18 @@
 .nav-area{
     display: flex;
 }
-.nav-area li{
-    list-style-type: none;
+.nav-area a{
+    text-decoration: none;
     cursor: pointer;
     color: white;
     letter-spacing: 1px;
     padding: 10px;
 }
-.nav-area li:hover{
+.nav-area a:hover{
     color: #CFD8DC;
+}
+@media screen and (max-width: 500px) {
+  .top-header{
+    flex-direction: column;
+  }
 }

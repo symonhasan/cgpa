@@ -7,26 +7,46 @@ import { Table } from "./Componants/Table";
 class App extends Component {
     state = {
         subjectList: [],
+        alertMsg: "One or more fields are empty",
+        showError: false
     };
+
+    renderError = () => {
+      this.setState({
+        showError: true
+      });
+    }
+    resetShowMsg = () => {
+      this.setState({
+        showError: false
+      });
+    }
 
     addCourse = () => {
         let name = document.getElementById("course-title").value;
         let credit = parseFloat(document.getElementById("credit-hour").value);
         let gpa = parseFloat(document.getElementById("gpa").value);
-        this.setState({
-            subjectList: [
-                ...this.state.subjectList,
-                {
-                    name: name,
-                    credit: credit,
-                    gpa: gpa,
-                },
-            ],
-        });
+        if( name !== "" && !isNaN( credit ) && !isNaN( gpa ) ){
+          this.setState({
+              subjectList: [
+                  ...this.state.subjectList,
+                  {
+                      name: name,
+                      credit: credit,
+                      gpa: gpa,
+                  },
+              ],
+              showError: false
+          });
+        }
+        else{
+          this.renderError();
+        }
     };
     resetAll = () => {
         this.setState({
             subjectList: [],
+            showError: false
         });
     };
 
@@ -51,16 +71,18 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <Header cgpa={this.calculateCGPA()} func={this.resetAll} />
+                <Header cgpa={this.calculateCGPA()} func={this.resetAll} link="https://github.com" />
+                  <div className="error">
+                      {
+                        this.state.showError ? <p onClick={this.resetShowMsg}>{this.state.alertMsg}</p> : null
+                      }
+                  </div>
                 <div className="AppBody">
-                    <div className="">
+                    <div className="course-add">
                         <Form func={this.addCourse} />
                         <div className="info">
                             <p>
-                                This site don't store any of your private data
-                                or entered data to server. You must have
-                                javascript enable in your browser to run this
-                                website.
+                                This project is under <strong>MIT License</strong> and completely runs into your browser therefore no information won't send to any sever.
                             </p>
                         </div>
                     </div>
