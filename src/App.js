@@ -75,7 +75,7 @@ class App extends Component {
         for (let i = 0; i < courseList.length; i++)
             gpaSum += courseList[i].credit * courseList[i].gpa;
         if (totalCredit === 0) return "";
-        return gpaSum / totalCredit;
+        return (gpaSum / totalCredit).toFixed( 2 );
     }
 
     TableShow() {
